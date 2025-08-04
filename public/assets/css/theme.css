@@ -1,0 +1,72 @@
+
+:root {
+    --ie-blue: #2A90D9;
+    --ie-green: #4CAF50;
+    --ie-purple: #6A1B9A;
+    --ie-gray: #f5f5f5;
+    --ie-dark: #212529;
+}
+
+body {
+    background-color: var(--ie-gray);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo {
+    max-width: 220px;
+    height: auto;
+    animation: fadeInUp 1s ease-in-out;
+    transition: transform 0.3s ease;
+    display: block;
+    margin-bottom: 20px;
+     animation: fadeInUp 1s ease-in-out, float 4s ease-in-out infinite;
+}
+
+.logo:hover {
+    transform: scale(1.05) rotate(1deg);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0px); }
+}
+
+.btn-ie-fid {
+ background-color: #5CB85C; /* vert */
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-ie-fid:hover {
+ background-color: #449D44;
+}
+
+.btn-ie-tracker {
+  background-color: #7A3E9D; /* violet */
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-ie-tracker:hover {
+ background-color: #622F7E;
+}
+
+.footer {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
