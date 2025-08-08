@@ -25,54 +25,23 @@ class FidController extends Controller
      * Page d'accueil - Liste des FID
      */
     public function index()
-    {
-        $page = (int) ($this->request->getGet('page') ?? 1);
-        $limit = 10;
-        $offset = ($page - 1) * $limit;
-
-        // Filtres de recherche
-        $filters = [
-            'status' => $this->request->getGet('status'),
-            'search' => $this->request->getGet('search'),
-        ];
-
-        // Récupérer les FID avec pagination
-        $fids = $this->fidModel->getFidsWithPagination($limit, $offset, $filters);
-        
-        // Compter le total pour la pagination
-        $total = $this->fidModel->countAll();
-        
-        $data = [
-            'title' => 'Gestion des FID',
-            'fids' => $fids,
-            'pagination' => [
-                'current_page' => $page,
-                'total_pages' => ceil($total / $limit),
-                'total_items' => $total,
-            ],
-            'filters' => $filters,
-        ];
-
-        return view('fid/index', $data);
-    }
+{
+    // TODO: Créer la vue fid/index
+    echo '<h1>Liste des FID</h1>';
+    echo '<p>Vue en cours de développement...</p>';
+    echo '<a href="' . base_url() . '">Retour accueil</a>';
+}
 
     /**
      * Afficher le formulaire de création d'une FID
      */
-    public function create()
-    {
-        // Charger les données de référence pour les dropdowns
-        $data = [
-            'title' => 'Créer une nouvelle FID',
-            'integrites' => $this->getIntegrites(),
-            'codes_un' => $this->getCodesUn(),
-            'types_conditionnement' => $this->getTypesConditionnement(),
-            'codes_dechets' => $this->getCodesDechets(),
-        ];
-
-        return view('fid/create', $data);
-    }
-
+   public function create()
+{
+    // TODO: Créer la vue fid/create
+    echo '<h1>Créer une FID</h1>';
+    echo '<p>Vue en cours de développement...</p>';
+    echo '<a href="' . base_url() . '">Retour accueil</a>';
+}
     /**
      * Enregistrer une nouvelle FID
      */

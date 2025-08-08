@@ -73,15 +73,16 @@ $routes->group('trackdechets', function($routes) {
 
 // === ROUTE DE TEST (Temporaire) ===
 $routes->get('test', function() {
+    $baseUrl = base_url();
     echo '<h1>Test IE-TRANS Platform</h1>';
     echo '<p>Routes configurées !</p>';
+    echo '<p>Base URL: ' . $baseUrl . '</p>';
     echo '<ul>';
-    echo '<li><a href="/fid">Gestion des FID</a></li>';
-    echo '<li><a href="/fid/create">Créer une FID</a></li>';
-    echo '<li><a href="/api/integrites">API Intégrités (JSON)</a></li>';
+    echo '<li><a href="' . $baseUrl . 'fid">Gestion des FID</a></li>';
+    echo '<li><a href="' . $baseUrl . 'fid/create">Créer une FID</a></li>';
+    echo '<li><a href="' . $baseUrl . 'api/integrites">API Intégrités (JSON)</a></li>';
     echo '</ul>';
 });
-
 $routes->get('test-url', function() {
     return view('test_base_url');
 });
